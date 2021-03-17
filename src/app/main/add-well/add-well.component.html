@@ -1,0 +1,19 @@
+<form>
+
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input name="name" type="text" class="form-control" placeholder="Enter Name" id="name"
+            [(ngModel)]="addWellChild.name">
+    </div>
+    <div class="form-group">
+        <label for="type">Type:</label>
+        <input name="type" type="text" class="form-control" placeholder="Enter Type" id="type"
+            [(ngModel)]="addWellChild.type">
+    </div>
+    <div class="form-group">
+        <label for="sourcekey">SourceKey:</label>
+        <input name="sourcekey" type="text" disabled class="form-control" placeholder="Enter SourceKey" id="sourcekey"
+            [(ngModel)]="addWellChild.sourcekey">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="addWellToList()">Add Well</button>
+</form>

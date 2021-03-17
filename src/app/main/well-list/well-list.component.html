@@ -1,0 +1,40 @@
+<div>
+    <h6>Well List Table</h6>
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>SourceKey</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let wellUser of wellTableDetails; let wellIndex = index;">
+                <td>{{wellUser.name}}</td>
+                <td [ngStyle]="{'background-color': wellUser.color}">{{wellUser.type}}</td>
+                <td><button class="invisible-btn" (click)='openAddWell(wellIndex)'>{{wellUser.sourcekey}}</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div *ngIf='showModal' class="modal" id="myModal" [style.display]="showModal ? 'block' : 'none'">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">User Details:</h4>
+                    <button type="button" class="close" data-dismiss="modal" (click)="hideAddWell()">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <add-well (addWellToListArr)="addWellToList($event)" [addWell]='selectedWell'></add-well>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

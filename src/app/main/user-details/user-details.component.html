@@ -1,0 +1,26 @@
+<div>
+    <h6>User Details Table</h6>
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userDetails">
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <h6>Toggle Content using ng-template and ngIf</h6>
+    <button class="btn btn-primary" (click)="displayFlag = !displayFlag">Toggle Display</button>
+    <ng-template [ngIf]="displayFlag" [ngIfElse]="displayElse">
+        <p class="display-text">Displaying If condition</p>
+    </ng-template>
+    <ng-template #displayElse>
+        <p class="display-text">Displaying Else condition</p>
+    </ng-template>
+</div>

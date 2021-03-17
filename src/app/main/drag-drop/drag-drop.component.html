@@ -1,0 +1,13 @@
+<div>
+    <div (dragover)="ondropover($event)" (drop)="ondrop($event)" class="left-container">
+        <ng-template #dropArea></ng-template>
+
+    </div>
+    <div class="right-container">
+        <p>Drag Items from the List</p>
+        <div draggable="true" class="draggable" (dragstart)="ondragstart($event,dragInd)" *ngFor='let dragItem of dragItemList; let dragInd = index;'>
+            {{dragItem.name}}
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

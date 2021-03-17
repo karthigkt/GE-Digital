@@ -1,0 +1,27 @@
+.left-container{
+    width:70%;
+    height: 500px;
+    float: left;
+    border: 1px solid #f7f7f7;
+    padding: 10px;
+    overflow: auto;
+}
+
+.right-container{
+    width:30%;
+    height: 500px;
+    float: left;
+    border: 1px solid #f7f7f7;
+    border-left: none;
+    padding: 10px;
+    overflow: auto;
+}
+
+.draggable{
+    width: 90%;
+    background: rgb(132, 213, 233);
+    cursor: move;
+    margin-bottom: 2px;
+    padding: 5px;
+
+}
